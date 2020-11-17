@@ -8,27 +8,15 @@
      ######################################################################## ]]
 --   ## Let's init this file shall we?
 -- Imports
+local _G = _G
+--Durrr = select(2, ...)
 local me, ns = ...
-local lang = GetLocale()
-local l = LibStub("AceLocale-3.0")
-local L = l:NewLocale(me, "enUS", true, true)
-if not L then return end
+local addon = ns
+local AddonStub_Functions = addon:NewModule("Functions", "AceConsole-3.0", "AceEvent-3.0", "AceTimer-3.0", "AceHook-3.0")
+local L = addon:GetLocale()
 -- End Imports
 --[[ ######################################################################## ]]
 --   ## Do All The Things!!!
-
---@localization(locale="enUS", format="lua_additive_table")@
-
---@do-not-package@
-L["ErrorDB"] = "Error: Database not loaded correctly. Exit WoW and delete Durrrability.lua found in your SavedVariables folder"
-L["AddonName"] = "Durrrability"
-L["Profiles"] = "Profiles"
-L["RightClick"] = "Right-Click"
-L["RightToolTip"] = "to open the options menu."
-L["LeftClick"] = "Left-Click"
-L["LeftToolTip"] = "to do something."
-L["GeneralSettings"] = "General Settings"
---@end-do-not-package@
 
 --[[
      ########################################################################

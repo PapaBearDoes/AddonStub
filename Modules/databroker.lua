@@ -8,27 +8,42 @@
      ######################################################################## ]]
 --   ## Let's init this file shall we?
 -- Imports
+local _G = _G
+--Durrr = select(2, ...)
 local me, ns = ...
-local lang = GetLocale()
-local l = LibStub("AceLocale-3.0")
-local L = l:NewLocale(me, "enUS", true, true)
-if not L then return end
+local addon = ns
+local L = addon:GetLocale()
 -- End Imports
 --[[ ######################################################################## ]]
 --   ## Do All The Things!!!
+-- Do LDB stuff --
+LDB = LibStub("LibDataBroker-1.1")
+AddonLDB = LDB:NewDataObject("AddonLDB", {
+  type = "data source",
+  label = "",
+  text = "",
+  icon = "",
+  OnClick = function(frame, click)
+    if click == "RightButton" then
+      addon:ShowConfig()
+    end
+    addon:MainUpdate()
+  end,
+  OnTooltipShow = function(tooltip)
+    if not tooltip or not tooltip.AddLine then return end
+    tooltip:AddLine(L["AddonName"] .. " " .. GetAddOnMetadata(me, "Version"))
+    tooltip:AddLine(" ")
 
---@localization(locale="enUS", format="lua_additive_table")@
+    tooltip:AddLine(addon:Colorize(L["RightClick"] .. " ", "eda55f") .. L["RightToolTip"])
+  end,
+})
 
---@do-not-package@
-L["ErrorDB"] = "Error: Database not loaded correctly. Exit WoW and delete Durrrability.lua found in your SavedVariables folder"
-L["AddonName"] = "Durrrability"
-L["Profiles"] = "Profiles"
-L["RightClick"] = "Right-Click"
-L["RightToolTip"] = "to open the options menu."
-L["LeftClick"] = "Left-Click"
-L["LeftToolTip"] = "to do something."
-L["GeneralSettings"] = "General Settings"
---@end-do-not-package@
+function addon:MainUpdate()
+end
+
+function addon:UpdateIcon()
+end
+-- End LDB stuff --
 
 --[[
      ########################################################################
