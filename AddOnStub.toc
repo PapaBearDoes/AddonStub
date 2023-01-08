@@ -39,3 +39,6 @@ DadGratz.lua
 
 # Load Includes
 Includes\includes.xml
+
+# Load Modules
+Modules\modules.xml

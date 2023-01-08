@@ -19,6 +19,7 @@ local initOptions = {
   enhancedProfile = true
 }
 local AddonStub = LibStub("LibInit"):NewAddon(addon, myName, initOptions, true)
+local AddonStubModuleLibraries = AddonStub:SetDefaultModuleLibraries("AceEvent-3.0")
 local L = AddonStub:GetLocale()
 -- End Imports
 --   ######################################################################## ]]

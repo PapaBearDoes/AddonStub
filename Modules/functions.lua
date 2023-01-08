@@ -12,6 +12,18 @@
 local _G = _G
 local myName, addon = ...
 local AddonStub = addon
+local initModuleLibs = {
+  "AceConfig-3.0",
+  "AceConsole-3.0",
+  "AceDB-3.0",
+  "AceDBOptions-3.0",
+  "AceEvent-3.0",
+  "AceGUI-3.0",
+  "AceHook-3.0",
+  "AceLocale-3.0",
+  "AceTimer-3.0"
+}
+local AddonStubModule = AddonStub:NewModule("AddonStubFunctions", initModuleLibs)
 local L = AddonStub:GetLocale()
 -- End Imports
 --[[ ######################################################################## ]]
