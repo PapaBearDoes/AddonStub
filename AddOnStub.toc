@@ -35,7 +35,7 @@ Libs\LibDialog-1.0\LibDialog-1.0.lua
 Locales\locales.xml
 
 # Load Main file(s)
-DadGratz.lua
+AddonStub.lua
 
 # Load Includes
 Includes\includes.xml
