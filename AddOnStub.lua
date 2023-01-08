@@ -25,7 +25,7 @@ local L = AddonStub:GetLocale()
 --   ######################################################################## ]]
 --   ## Do All The Things!!!
 --[[FUNCTIONS]]
-function DadGratz:OnInitialize()
+function AddonStub:OnInitialize()
   AddonStub.db = LibStub("AceDB-3.0"):New("AddonStubSV", AddonStub.dbDefaults, "Default")
   AddonStub.db.RegisterCallback(self, "OnProfileChanged", "UpdateProfile")
   AddonStub.db.RegisterCallback(self, "OnProfileCopied", "UpdateProfile")
