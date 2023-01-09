@@ -4,7 +4,7 @@
                                    (| (.)(.) |)
      .---------------------------.OOOo--()--oOOO.---------------------------.
      |                                                                      |
-     |  PapaBearDoes's DadGratz Addon for World of Warcraft                 |
+     |  PapaBearDoes's AddonStub Addon for World of Warcraft                 |
      |  @project-version@
      ######################################################################## ]]
 --   ## Let's init this file shall we?
@@ -18,7 +18,7 @@ local L = AddonStub:GetLocale()
 --   ## Do All The Things!!!
 --LDB
 AddonStub_LDB = LibStub("LibDataBroker-1.1")
-AddonStubLDB = AddonStub_LDB:NewDataObject("DadGratzLDB", {
+AddonStubLDB = AddonStub_LDB:NewDataObject("AddonStubLDB", {
   type = "data source",
   label = myName,
   text = "",
