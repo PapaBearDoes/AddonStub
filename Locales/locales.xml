@@ -1,3 +1,12 @@
+<!--
+                                 \\\\///
+                                /       \
+                              (| (.)(.) |)
+.===========================.OOOo==()==oOOO.===========================.
+|                                                                      |
+|  PapaBearDoes' AddonStub Addon for World of Warcraft              |
+|  @project-version@
+######################################################################## -->
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\FrameXML\UI.xsd">
   <Script file="deDE.lua"/>
@@ -12,3 +21,12 @@
   <Script file="zhCN.lua"/>
   <Script file="zhTW.lua"/>
 </Ui>
+<!--
+########################################################################
+|  Last Editted By: @file-author@ - @file-date-iso@
+|  @file-hash@
+'=======================.oooO==========================================|
+                       (    )     Oooo.
+                        \  (     (    )
+                         \__)     )  /
+                                 (__/                                    -->

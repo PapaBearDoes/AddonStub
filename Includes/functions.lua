@@ -12,29 +12,19 @@
 local _G = _G
 local myName, addon = ...
 local AddonStub = addon
-local initModuleLibs = {
-  "AceConfig-3.0",
-  "AceConsole-3.0",
-  "AceDB-3.0",
-  "AceDBOptions-3.0",
-  "AceEvent-3.0",
-  "AceGUI-3.0",
-  "AceHook-3.0",
-  "AceLocale-3.0",
-  "AceTimer-3.0"
-}
-local AddonStubModule = AddonStub:NewModule("AddonStubFunctions", initModuleLibs)
 local L = AddonStub:GetLocale()
 -- End Imports
 --[[ ######################################################################## ]]
 --   ## Do All The Things!!!
--- Config window --
+--[[ Addon Functions ]]
+--[[ End Addon Functions ]]
+
+--[[ Main Functions ]]
 function AddonStub:ShowConfig()
   InterfaceOptionsFrame_OpenToCategory(AddonStubFrames.general)
   InterfaceOptionsFrame_OpenToCategory(AddonStubFrames.custom)
   InterfaceOptionsFrame_OpenToCategory(AddonStubFrames.profile)
 end
--- End Options --
 
 function AddonStub:UpdateOptions()
   LibStub("AceConfigRegistry-3.0"):NotifyChange(me)
@@ -66,6 +56,7 @@ end
 
 function AddonStub:OnProfileReset()
 end
+--[[ End Main Functions ]]
 --[[
      ########################################################################
      |  Last Editted By: @file-author@ - @file-date-iso@

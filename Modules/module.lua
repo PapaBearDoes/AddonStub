@@ -9,37 +9,26 @@
      ######################################################################## ]]
 --   ## Let's init this file shall we?
 -- Imports
+local _G = _G
 local myName, addon = ...
-local L = LibStub("AceLocale-3.0"):NewLocale(myName, "enUS", true)
-local L = L or {}
+local AddonStub = addon
+local moduleLibs = {
+  "AceConfig-3.0",
+  "AceConsole-3.0",
+  "AceDB-3.0",
+  "AceDBOptions-3.0",
+  "AceEvent-3.0",
+  "AceGUI-3.0",
+  "AceHook-3.0",
+  "AceLocale-3.0",
+  "AceTimer-3.0"
+}
+local AddonStubModule = AddonStub:NewModule("AddonStubModule", moduleLibs)
+local L = AddonStub:GetLocale()
 -- End Imports
 --[[ ######################################################################## ]]
---[[
-L["Phrase"] = "Translation"
-L["Phrase"] = true
-L["SubNameSpace"] = {
-  L["Phrase"] = "Translation"
-  L["Phrase"] = true
-}
-]]
---[[ ######################################################################## ]]
 --   ## Do All The Things!!!
--- enUS Localization
---@localization(locale="enUS", format="lua_additive_table", same-key-is-true=true, handle-subnamespaces="subtable")@
-L["general"] = true
-L["GeneralSettings"] = true
-L["Profiles"] = true
-L["profile"] = true
-L["Options"] = true
-L["Default"] = true
-L["ShowMinimapButton"] = "Show Minimap Button"
-L["ShowMinimapButtonDesc"] = "Show Minimap Button Description"
-L["Version"] = true
-L["RightClick"] = "Right Click"
-L["RightClickToolTip"] = "Right Click Tooltip"
 
-L["DoThing"] = "Do The Thing"
-L["DoThingDesc"] = "Do The Thing Description"
 --[[
      ########################################################################
      |  Last Editted By: @file-author@ - @file-date-iso@

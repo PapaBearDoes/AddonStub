@@ -19,7 +19,8 @@ local initOptions = {
   enhancedProfile = true
 }
 local AddonStub = LibStub("LibInit"):NewAddon(addon, myName, initOptions, true)
-local AddonStubModuleLibraries = AddonStub:SetDefaultModuleLibraries("AceEvent-3.0")
+AddonStub:SetDefaultModuleLibraries("AceConfig-3.0", "AceConsole-3.0", "AceDB-3.0", "AceDBOptions-3.0", "AceEvent-3.0", "AceGUI-3.0", "AceHook-3.0", "AceLocale-3.0", "AceTimer-3.0")
+AddonStub:SetDefaultModuleState(true)
 local L = AddonStub:GetLocale()
 -- End Imports
 --   ######################################################################## ]]
@@ -49,8 +50,8 @@ end
 function AddonStub:OnEnable()
   local AddonStubDialog = LibStub("AceConfigDialog-3.0")
   AddonStubFrames = {}
-  AddonStubFrames.general = AddonStubDialog:AddToBlizOptions(myName, nil, nil, "general")
-  AddonStubOptionFrames.profile = AddonStubDialog:AddToBlizOptions(myName, L["Profiles"], myName, "profile")
+  AddonStubFrames.general = AddonStubDialog:AddToBlizOptions(myName, nil, nil, L["general"])
+  AddonStubOptionFrames.profile = AddonStubDialog:AddToBlizOptions(myName, L["Profiles"], myName, L["profile"])
 end
 
 function AddonStub:OnModuleEnable_Common()

@@ -32,7 +32,7 @@ AddonStubLDB = AddonStub_LDB:NewDataObject("DadGratzLDB", {
     if not tooltip or not tooltip.AddLine then
       return
     end
-    tooltip:AddLine(myName .. " " .. GetAddOnMetadata(myName, "Version"))
+    tooltip:AddLine(myName .. " " .. GetAddOnMetadata(myName, L["Version"]))
     
     tooltip:AddLine(" ")
     tooltip:AddLine(AddonStub:Colorize(L["RightClick"] .. " ", "eda55f") .. L["RightClickToolTip"])
