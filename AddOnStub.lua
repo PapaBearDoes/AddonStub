@@ -49,8 +49,8 @@ end
 
 function AddonStub:OnEnable()
   local AddonStubDialog = LibStub("AceConfigDialog-3.0")
-  AddonStubFrames = {}
-  AddonStubFrames.general = AddonStubDialog:AddToBlizOptions(myName, nil, nil, L["general"])
+  AddonStubOptionFrames = {}
+  AddonStubOptionFrames.general = AddonStubDialog:AddToBlizOptions(myName, nil, nil, L["general"])
   AddonStubOptionFrames.profile = AddonStubDialog:AddToBlizOptions(myName, L["Profiles"], myName, L["profile"])
 end
 
